@@ -3,7 +3,8 @@
 ## Beginner Projects (Day 1-10)
 
 1. **Digital Clock**  
-   Display a live clock that updates every second using `setInterval`.
+    Display a live clock that updates every second using `setInterval`.
+   **Live Preview** https://venky-123-debug.github.io/50days50projects/DigitalClock/
 
 2. **Color Picker**  
    Change the background color dynamically using a color input.
