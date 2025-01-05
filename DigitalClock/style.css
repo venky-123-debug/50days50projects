@@ -6,6 +6,9 @@
   --hour-hand-color: #ff5733; /* Hour hand color */
   --minute-hand-color: #33b5ff; /* Minute hand color */
   --second-hand-color: #f00; /* Second hand color */
+  --digital-box-bg-color: #333;
+  --digital-box-shadow: rgba(0, 0, 0, 0.5);
+  --digital-text-color: #fff;
 }
 
 * {
@@ -25,6 +28,17 @@ body {
   transition: all ease 0.2s;
 }
 
+.page-header {
+  font-size: 2rem;
+  color: var(--main-text-color);
+  padding: 2rem 0;
+  font-family: monospace;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  transition: all ease 0.2s;
+}
+
+/* Analog Clock Styles */
 .clock {
   height: 18em;
   width: 18em;
@@ -40,6 +54,7 @@ body {
   transition: all ease 0.2s;
   margin-bottom: 2rem; /* Add some space below the clock */
 }
+
 .clock:before {
   content: "";
   height: 0.75rem;
@@ -99,4 +114,35 @@ body {
   width: 2px;
   background-color: var(--second-hand-color);
   border-radius: 2px;
+}
+
+/* Digital Clock Styles */
+.digital-clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.time-box {
+  display: flex;
+  align-items: center;
+  background-color: var(--digital-box-bg-color);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--digital-box-shadow);
+}
+
+.time-part {
+  font-size: 2.5rem;
+  color: var(--digital-text-color);
+  padding: 0.2rem 0.5rem;
+}
+
+.time-part:first-child {
+  margin-right: 0.2rem;
+}
+
+.time-part:last-child {
+  margin-left: 0.2rem;
 }
