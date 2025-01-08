@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle-Theme</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      body.dark-theme {
+        background-color: #1a1a1a;
+        color: #ffffff;
+      }
+      #btn {
+        padding: 12px 24px;
+        text-align: center;
+        font-size: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: 1px solid #ccc;
+      }
+      body.dark-theme #btn {
+        background-color: #333;
+        color: #ffffff;
+        border-color: #555;
+      }
+      #btn:hover {
+        background-color: #f0f0f0;
+      }
+      body.dark-theme #btn:hover {
+        background-color: #444;
+      }
+      .container {
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+      body.dark-theme .container {
+        background-color: #2d2d2d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Toggle Theme</h1>
+      <button type="button" id="btn">Toggle Theme</button>
+      <p>Please Click on Button to Toggle theme!</p>
+    </div>
+
+    <script>
+      let btn = document.getElementById("btn")
+
+      const currentTheme = localStorage.getItem("theme")
+      if (currentTheme === "dark") {
+        document.body.classList.add("dark-theme")
+      }
+
+      btn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-theme")
+
+        // Save theme preference
+        const theme = document.body.classList.contains("dark-theme") ? "dark" : "light"
+        localStorage.setItem("theme", theme)
+      })
+    </script>
+  </body>
+</html>
