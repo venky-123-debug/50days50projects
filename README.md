@@ -15,6 +15,8 @@
 3. **Toggle Theme**  
    Add a button to toggle between light and dark themes and save the choice in `localStorage`.
 
+**Live Preview** https://venky-123-debug.github.io/50days50projects/ToggleTheme/
+
 4. **Word Counter**  
    Count the number of words and characters entered in a textarea and update the count dynamically.
 
