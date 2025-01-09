@@ -20,6 +20,8 @@
 4. **Word Counter**  
    Count the number of words and characters entered in a textarea and update the count dynamically.
 
+**Live Preview** https://venky-123-debug.github.io/50days50projects/WordCounter/
+
 5. **Guess the Number**  
    Build a simple game where the user guesses a randomly generated number and receives feedback.
 
