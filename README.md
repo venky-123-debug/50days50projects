@@ -3,28 +3,24 @@
 ## Beginner Projects (Day 1-10)
 
 1. **Digital Clock**  
-   Display a live clock that updates every second using `setInterval`.
-
-**Live Preview** https://venky-123-debug.github.io/50days50projects/DigitalClock/
+    Display a live clock that updates every second using `setInterval`.
+   **Live Preview** https://venky-123-debug.github.io/50days50projects/DigitalClock/
 
 2. **Color Picker**  
-   Change the background color dynamically using a color input.
-
-**Live Preview** https://venky-123-debug.github.io/50days50projects/ColorPicker/
+    Change the background color dynamically using a color input.
+   **Live Preview** https://venky-123-debug.github.io/50days50projects/ColorPicker/
 
 3. **Toggle Theme**  
-   Add a button to toggle between light and dark themes and save the choice in `localStorage`.
-
-**Live Preview** https://venky-123-debug.github.io/50days50projects/ToggleTheme/
+    Add a button to toggle between light and dark themes and save the choice in `localStorage`.
+   **Live Preview** https://venky-123-debug.github.io/50days50projects/ToggleTheme/
 
 4. **Word Counter**  
-   Count the number of words and characters entered in a textarea and update the count dynamically.
-
-**Live Preview** https://venky-123-debug.github.io/50days50projects/WordCounter/
+    Count the number of words and characters entered in a textarea and update the count dynamically.
+   **Live Preview** https://venky-123-debug.github.io/50days50projects/WordCounter/
 
 5. **Guess the Number**  
-   Build a simple game where the user guesses a randomly generated number and receives feedback.
-
+    Build a simple game where the user guesses a randomly generated number and receives feedback.
+   **Live Preview** https://venky-123-debug.github.io/50days50projects/GuessNumber/
 6. **Accordion Menu**  
    Create an FAQ section where clicking on a question toggles its answer.
 
