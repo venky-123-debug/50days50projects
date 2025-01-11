@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion FAQ</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        background-color: #f7f7f7;
+      }
+      .container {
+        width: 50%;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .acc-container {
+        margin-top: 20px;
+        text-align: left;
+      }
+      .acc-item {
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+      }
+      .question {
+        cursor: pointer;
+        font-weight: bold;
+        color: #333;
+        transition: color 0.3s ease;
+      }
+      .question:hover {
+        color: #007bff;
+      }
+      .answer {
+        display: none;
+        margin-top: 5px;
+        color: #555;
+      }
+      .active .answer {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Accordion FAQ</h1>
+      <div class="acc-container" id="faq">
+        <!-- FAQ items will be dynamically added here -->
+      </div>
+    </div>
+
+    <script>
+      const accItems = [
+        { question: "What is an FAQ?", answer: "FAQ stands for Frequently Asked Questions." },
+        { question: "How does this accordion work?", answer: "Click on a question to toggle the answer's visibility." },
+        { question: "Can I add more questions?", answer: "Yes, you can add more questions in the 'accItems' array." },
+      ]
+
+      // Select the FAQ container
+      const faqContainer = document.getElementById("faq")
+
+      // Render FAQ items dynamically
+      accItems.forEach((item, index) => {
+        const accItem = document.createElement("div")
+        accItem.classList.add("acc-item")
+
+        accItem.innerHTML = `
+          <div class="question" data-index="${index}">${item.question}</div>
+          <div class="answer">${item.answer}</div>
+        `
+
+        faqContainer.appendChild(accItem)
+      })
+
+      // Add click event listener to toggle answer visibility
+      faqContainer.addEventListener("click", (e) => {
+        if (e.target.classList.contains("question")) {
+          const parent = e.target.parentElement
+          parent.classList.toggle("active")
+        }
+      })
+    </script>
+  </body>
+</html>

@@ -21,6 +21,7 @@
 5. **Guess the Number**  
     Build a simple game where the user guesses a randomly generated number and receives feedback.
    **Live Preview** https://venky-123-debug.github.io/50days50projects/GuessNumber/
+
 6. **Accordion Menu**  
    Create an FAQ section where clicking on a question toggles its answer.
 
