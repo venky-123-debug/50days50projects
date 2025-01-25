@@ -28,6 +28,7 @@
 
 7. **Hover Effects Gallery**  
    Create an image gallery with hover effects for scaling and captions.
+   **Live Preview** https://venky-123-debug.github.io/50days50projects/Gallery/
 
 8. **Simple Image Slider**  
    Add "Next" and "Previous" buttons to change images dynamically.
