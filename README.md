@@ -24,6 +24,7 @@
 
 6. **Accordion Menu**  
    Create an FAQ section where clicking on a question toggles its answer.
+   **Live Preview** https://venky-123-debug.github.io/50days50projects/Accordian/
 
 7. **Hover Effects Gallery**  
    Create an image gallery with hover effects for scaling and captions.

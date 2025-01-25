@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #bfcad5;
+        color: #333;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        text-align: center;
+        padding: 30px;
+        border-radius: 15px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 20px rgba(105, 67, 67, 0.1);
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        color: #0077b6;
+        margin-bottom: 25px;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+      }
+
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        background-color: #f8f9fa;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.08);
+      }
+
+      .caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(44, 10, 10, 0.8), rgba(0, 0, 0, 0.4)) !important;
+        color: #ffffff;
+        text-align: center;
+        padding: 15px;
+        font-size: 1.1rem;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+
+      .gallery-item:hover .caption {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Image Gallery</h1>
+      <div class="gallery" id="gallery"></div>
+    </div>
+
+    <script>
+      const gallery = document.getElementById("gallery")
+      const imageArray = ["../assets/image.png", "../assets/image2.png", "../assets/image3.png", "../assets/image4.png", "../assets/image5.png"]
+
+      imageArray.forEach((imageSrc, index) => {
+        const galleryItem = document.createElement("div")
+        galleryItem.classList.add("gallery-item")
+
+        const img = document.createElement("img")
+        img.src = imageSrc
+        img.alt = `Image ${index + 1}`
+
+        const caption = document.createElement("div")
+        caption.classList.add("caption")
+        caption.textContent = `Beautiful View ${index + 1}`
+
+        galleryItem.appendChild(img)
+        galleryItem.appendChild(caption)
+        gallery.appendChild(galleryItem)
+      })
+    </script>
+  </body>
+</html>
